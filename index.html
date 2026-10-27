@@ -1,0 +1,969 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vereador</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- ===== HEADER ===== -->
+    <header class="header" id="header">
+      <div class="header__container">
+        <div class="header__logo">
+          <a href="#">
+            <img
+              src="src/images/logoalex.webp"
+              alt="Logo Alex Vereador"
+              class="header__logo-img"
+            />
+          </a>
+        </div>
+
+        <nav class="header__nav" aria-label="Menu principal">
+          <ul class="header__nav-list">
+            <li><a href="#hero" class="header__nav-link">Home</a></li>
+            <li><a href="#gallery" class="header__nav-link">Galeria</a></li>
+            <li><a href="#sobre" class="header__nav-link">Sobre</a></li>
+            <li>
+              <a href="#leis" class="header__nav-link"> Leis e iniciativas </a>
+            </li>
+            <li><a href="#Acompanhe" class="header__nav-link">Shots</a></li>
+            <li><a href="#contato" class="header__nav-link">Contato</a></li>
+          </ul>
+        </nav>
+
+        <button
+          class="header__hamburger"
+          id="hamburger"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+          <span class="hamburger__line"></span>
+        </button>
+      </div>
+
+      <nav
+        class="header__mobile-nav"
+        id="mobile-menu"
+        aria-label="Menu mobile"
+        aria-hidden="true"
+      >
+        <ul class="header__mobile-list">
+          <li><a href="#hero" class="header__nav-link">Home</a></li>
+          <li><a href="#gallery" class="header__nav-link">Galeria</a></li>
+          <li><a href="#sobre" class="header__nav-link">Sobre</a></li>
+          <li>
+            <a href="#leis" class="header__nav-link"> Leis e iniciativas </a>
+          </li>
+          <li><a href="#Acompanhe" class="header__nav-link">Shots</a></li>
+          <li><a href="#contato" class="header__nav-link">Contato</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ===== HERO ESTÁTICO ===== -->
+    <section class="hero" id="hero" aria-label="Destaque">
+      <img
+        class="hero__img"
+        src="src/images/novahero.png"
+        alt="Vereador com representantes da Marinha"
+        loading="eager"
+        fetchpriority="high"
+      />
+      <div class="hero__overlay"></div>
+      <div class="hero__content">
+        <h1 class="hero__title">Uma voz que representa<br />a nossa cidade</h1>
+        <p class="hero__subtitle">
+          <span class="hero__eyebrow">Nosso mandato é participativo</span>
+        </p>
+        <div class="hero__actions">
+          <a href="#projetos" class="hero__btn hero__btn--primary"
+            >Ver projetos</a
+          >
+          <a href="#contato" class="hero__btn hero__btn--outline"
+            >Fale comigo</a
+          >
+        </div>
+      </div>
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span class="hero__scroll-arrow"></span>
+      </div>
+    </section>
+
+    <!-- ===== SECTION GALERIA / SLIDER ===== -->
+    <section class="gallery" id="gallery" aria-label="Nosso Vereador em Ação">
+      <div class="gallery__header">
+        <h2 class="gallery__title">Nosso Vereador e seus trabalhos</h2>
+        <p class="gallery__desc">
+          Presente em cada evento, reunião e obra da nossa cidade. Acompanhe os
+          momentos que fazem a diferença.
+        </p>
+      </div>
+
+      <div class="gallery__slider-wrap">
+        <!-- Seta esquerda -->
+        <button
+          class="gallery__arrow gallery__arrow--prev"
+          id="gPrev"
+          aria-label="Slide anterior"
+        >
+          &#8249;
+        </button>
+
+        <div class="gallery__slider" id="gallerySlider">
+          <!-- Slide 1 — Câmara Municipal -->
+          <div class="gslide gslide--active" aria-hidden="false">
+            <img
+              class="gslide__img"
+              src="src/images/slide1.jpg"
+              alt="Vereador na Câmara Municipal"
+              loading="lazy"
+              style="object-position: center 25%"
+            />
+            <div class="gslide__caption">Sessão na Câmara Municipal</div>
+          </div>
+
+          <!-- Slide 2 — Marinha -->
+          <div class="gslide" aria-hidden="true">
+            <img
+              class="gslide__img"
+              src="src/images/slide2.jpg"
+              alt="Vereador com representantes da Marinha"
+              loading="lazy"
+              style="object-position: center center"
+            />
+            <div class="gslide__caption">
+              Representando a cidade junto à Marinha do Brasil
+            </div>
+          </div>
+
+          <!-- Slide 3 — Evento dia -->
+          <div class="gslide" aria-hidden="true">
+            <img
+              class="gslide__img"
+              src="src/images/slide3.jpg"
+              alt="Vereador em evento com a comunidade"
+              loading="lazy"
+              style="object-position: center 28%"
+            />
+            <div class="gslide__caption">
+              Presença ativa em eventos da comunidade
+            </div>
+          </div>
+
+          <!-- Slide 4 — Evento noturno -->
+          <div class="gslide" aria-hidden="true">
+            <img
+              class="gslide__img"
+              src="src/images/slide4.jpg"
+              alt="Vereador em evento noturno com apoiadores"
+              loading="lazy"
+              style="object-position: center 30%"
+            />
+            <div class="gslide__caption">
+              Mobilização e apoio popular nas ruas
+            </div>
+          </div>
+        </div>
+        <!-- /gallery__slider -->
+
+        <!-- Seta direita -->
+        <button
+          class="gallery__arrow gallery__arrow--next"
+          id="gNext"
+          aria-label="Próximo slide"
+        >
+          &#8250;
+        </button>
+      </div>
+
+      <!-- Dots -->
+      <div
+        class="gallery__dots"
+        id="gDots"
+        role="tablist"
+        aria-label="Selecionar slide"
+      >
+        <button
+          class="gdot gdot--active"
+          role="tab"
+          aria-selected="true"
+          aria-label="Slide 1"
+        ></button>
+        <button
+          class="gdot"
+          role="tab"
+          aria-selected="false"
+          aria-label="Slide 2"
+        ></button>
+        <button
+          class="gdot"
+          role="tab"
+          aria-selected="false"
+          aria-label="Slide 3"
+        ></button>
+        <button
+          class="gdot"
+          role="tab"
+          aria-selected="false"
+          aria-label="Slide 4"
+        ></button>
+      </div>
+    </section>
+
+    <main>
+      <!-- =======================================================
+         SEÇÃO 01 — TRAJETÓRIA / APRESENTAÇÃO
+         ======================================================= -->
+
+      <section class="secao-trajetoria" aria-labelledby="titulo-trajetoria">
+        <div class="container-trajetoria" id="sobre">
+          <!-- ---------------------------------------------------
+             BLOCO DE IMAGENS DA TRAJETÓRIA
+             --------------------------------------------------- -->
+
+          <div class="trajetoria-galeria">
+            <!-- FOTO PEQUENA — PERFIL -->
+
+            <div class="trajetoria-foto trajetoria-foto--perfil">
+              <img
+                src="/src/e65ece46-7f84-4a44-9eee-8a1f9d3fbad0.png"
+                alt="Alex Freitas"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- FOTO PRINCIPAL -->
+
+            <div class="trajetoria-foto trajetoria-foto--principal">
+              <img
+                src="src/ChatGPT Image 11 de set. de 2026, 15_37_30.png"
+                alt="Alex Freitas durante atividade pública"
+                fetchpriority="high"
+              />
+            </div>
+          </div>
+
+          <!-- ---------------------------------------------------
+             CONTEÚDO DA TRAJETÓRIA
+             --------------------------------------------------- -->
+
+          <div class="trajetoria-texto">
+            <span class="rotulo-secao"> Quem é Alex Freitas? </span>
+
+            <h1 id="titulo-trajetoria">
+              Uma trajetória construída em Duque de Caxias
+            </h1>
+
+            <h2>Uma história ligada à cidade</h2>
+
+            <p>
+              Alex Freitas Marques é vereador de Duque de Caxias e morador do
+              bairro Pilar. Sua trajetória reúne experiência na administração
+              pública e atuação no Legislativo municipal.
+            </p>
+
+            <h2>Experiência antes do Legislativo</h2>
+
+            <p>
+              Antes da atuação parlamentar, passou por áreas da administração
+              pública relacionadas à Vigilância Ambiental, Vetores e Zoonoses,
+              com experiência em ações de prevenção e combate às endemias.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+         SEÇÃO 02 — SAÚDE PÚBLICA
+         ======================================================= -->
+
+      <section class="secao-saude" aria-labelledby="titulo-saude">
+        <div class="container-saude">
+          <!-- ---------------------------------------------------
+             CONTEÚDO DA SAÚDE
+             --------------------------------------------------- -->
+
+          <div class="saude-texto">
+            <span class="rotulo-secao"> Saúde pública </span>
+
+            <h2 id="titulo-saude">Saúde pública como parte da trajetória</h2>
+
+            <p>
+              A experiência de Alex Freitas na área de Vigilância Ambiental,
+              Vetores e Zoonoses aproximou sua trajetória de temas relacionados
+              à prevenção de doenças e à saúde pública.
+            </p>
+
+            <p>
+              Em 2026, na primeira sessão plenária do ano, foi protocolada uma
+              indicação de projeto voltada ao atendimento de pessoas com
+              obesidade em Duque de Caxias. A proposta prevê a disponibilização
+              do medicamento Mounjaro (tirzepatida) nas Clínicas da Família,
+              mediante acompanhamento médico e psicológico, conforme os
+              critérios estabelecidos pelo sistema municipal de saúde.
+            </p>
+
+            <p>
+              A iniciativa propõe ampliar as possibilidades de acompanhamento
+              clínico da obesidade, incluindo alternativas de tratamento antes
+              da necessidade de procedimentos cirúrgicos, além de buscar
+              integrar acompanhamento médico e psicológico no cuidado aos
+              pacientes.
+            </p>
+
+            <h3>Valorização de quem atua na prevenção</h3>
+
+            <p>
+              A atuação legislativa também inclui iniciativas relacionadas aos
+              profissionais que trabalham diretamente na prevenção e no combate
+              às endemias. A Lei nº 3.489/2025 autoriza o Poder Executivo
+              Municipal a efetuar o pagamento de Incentivo Financeiro Adicional
+              aos Agentes Comunitários de Saúde e Agentes de Combate às
+              Endemias, conforme as condições estabelecidas na própria
+              legislação.
+            </p>
+          </div>
+
+          <!-- ---------------------------------------------------
+             IMAGEM / COMPOSIÇÃO VISUAL DA SAÚDE
+             --------------------------------------------------- -->
+
+          <div class="saude-area-visual" aria-hidden="true">
+            <!-- FORMA AZUL -->
+
+            <div class="saude-forma saude-forma--azul"></div>
+
+            <!-- FOTO PRINCIPAL -->
+
+            <div class="saude-foto">
+              <img src="/src/fotomojuaro.png" alt="" loading="lazy" />
+            </div>
+
+            <!-- FORMA AMARELA -->
+
+            <div class="saude-forma saude-forma--amarela"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+         SEÇÃO 03 — ATUAÇÃO PARLAMENTAR
+         ======================================================= -->
+
+      <section class="secao-parlamento" aria-labelledby="titulo-parlamento">
+        <div class="container-parlamento">
+          <!-- ---------------------------------------------------
+             FOTO DA ATUAÇÃO PARLAMENTAR
+             --------------------------------------------------- -->
+
+          <div class="parlamento-foto">
+            <img
+              src="/src/alex 1.jpg"
+              alt="Alex Freitas durante atividade parlamentar"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- ---------------------------------------------------
+             CONTEÚDO DA ATUAÇÃO PARLAMENTAR
+             --------------------------------------------------- -->
+
+          <div class="parlamento-texto">
+            <span class="rotulo-secao"> Atuação parlamentar </span>
+
+            <h2 id="titulo-parlamento">Atuação no Legislativo municipal</h2>
+
+            <p>
+              A atuação parlamentar registrada pela Câmara Municipal envolve
+              áreas como saúde, educação, cultura, serviços públicos,
+              infraestrutura, recursos hídricos e desenvolvimento urbano.
+            </p>
+
+            <h3>Saúde, educação e serviços públicos</h3>
+
+            <p>
+              Entre as iniciativas registradas estão medidas relacionadas à
+              saúde, educação, acesso a informações sobre serviços públicos e
+              utilização dos espaços municipais.
+            </p>
+
+            <h3>Participação nas comissões da Câmara</h3>
+
+            <p>
+              A Câmara registra Alex Freitas como presidente das Comissões
+              Permanentes de Ética, Educação e Cultura, Finanças e Orçamento e
+              Defesa dos Animais, além de relatoria em comissões relacionadas a
+              recursos hídricos, esgoto e energia, saúde e assistência social,
+              obras e serviços públicos e desenvolvimento urbano.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+         SEÇÃO 04 — CULTURA / PARTICIPAÇÃO / PEQUIM
+         ======================================================= -->
+
+      <section class="secao-cultura" aria-labelledby="titulo-cultura">
+        <div class="container-cultura">
+          <!-- ---------------------------------------------------
+             CONTEÚDO DE CULTURA E INTERCÂMBIO
+             --------------------------------------------------- -->
+
+          <div class="cultura-foto">
+            <img
+              src="/src/fotsentado.jpg"
+              alt="Alex Freitas durante atividade de intercâmbio e participação pública"
+              loading="lazy"
+            />
+          </div>
+
+          <div class="cultura-texto">
+            <span class="rotulo-secao"> Cultura e participação </span>
+
+            <h2 id="titulo-cultura">
+              Cultura, participação e novas experiências
+            </h2>
+
+            <!-- CULTURA -->
+
+            <h3>Cultura e ocupação dos espaços públicos</h3>
+
+            <p>
+              A atuação também contempla iniciativas voltadas à cultura, à
+              ocupação dos espaços públicos e à valorização das manifestações
+              culturais de Duque de Caxias.
+            </p>
+
+            <p>
+              A <strong>Lei nº 3.438/2024</strong>, de autoria do vereador Alex
+              Freitas Marques, criou o
+              <strong>Programa Cultura Popular nas Ruas</strong>, estabelecendo
+              mecanismos para que artistas residentes no município possam
+              utilizar praças e outros espaços públicos para apresentações e
+              atividades culturais, mediante autorização.
+            </p>
+
+            <!-- INTERCÂMBIO -->
+
+            <h3>Intercâmbio e novas experiências</h3>
+
+            <p>
+              A participação em atividades e intercâmbios também faz parte dessa
+              trajetória.
+            </p>
+
+            <p>
+              <strong>
+                Aqui em Pequim, na China, finalizamos o primeiro dia do
+                Seminário Cidades Inteligentes, onde tenho a honra de
+                representar a cidade de Duque de Caxias neste importante
+                intercâmbio de conhecimentos.
+              </strong>
+            </p>
+
+            <p>
+              Seguimos aprendendo, trocando experiências e conhecendo soluções
+              que podem inspirar projetos para uma cidade cada vez mais moderna,
+              eficiente e preparada para o futuro. O trabalho continua, sempre
+              com o compromisso de buscar novas referências e conhecer
+              experiências que possam contribuir para o desenvolvimento do
+              município.
+            </p>
+
+            <p class="cultura-destaque-final">
+              <strong> Nosso mandato é participativo. 🫱🏾‍🫲🏻 </strong>
+            </p>
+          </div>
+
+          <!-- ---------------------------------------------------
+             FOTO DA CULTURA / INTERCÂMBIO
+             --------------------------------------------------- -->
+        </div>
+      </section>
+
+      <!-- =======================================================
+         SEÇÃO 05 — ACOMPANHAMENTO / TRANSPARÊNCIA
+         ======================================================= -->
+
+      <section
+        class="secao-transparencia"
+        aria-labelledby="titulo-transparencia"
+      >
+        <div class="transparencia-cartao">
+          <span class="rotulo-secao"> Acompanhe o trabalho </span>
+
+          <h2 id="titulo-transparencia">
+            Informação para acompanhar a atividade parlamentar
+          </h2>
+
+          <p>
+            Leis, projetos, comissões e atividades parlamentares podem ser
+            consultados nos canais oficiais da Câmara Municipal de Duque de
+            Caxias. Esta página reúne alguns dos temas e iniciativas para
+            facilitar o acesso às informações.
+          </p>
+
+          <a
+            class="transparencia-botao"
+            href="https://www.cmdc.rj.gov.br/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Consultar Câmara Municipal
+          </a>
+        </div>
+      </section>
+
+      <!-- =======================================================
+         SEÇÃO 06 — LEIS E INICIATIVAS
+         ÚLTIMA SEÇÃO DA TRAJETÓRIA
+         ======================================================= -->
+
+      <section class="secao-leis" aria-labelledby="titulo-leis">
+        <div class="container-leis" id="leis">
+          <!-- ---------------------------------------------------
+             CABEÇALHO DAS LEIS
+             --------------------------------------------------- -->
+
+          <header class="leis-cabecalho">
+            <span class="rotulo-secao"> Leis e iniciativas </span>
+
+            <h2 id="titulo-leis">Leis e iniciativas legislativas</h2>
+
+            <p>
+              Algumas iniciativas de autoria de Alex Freitas foram transformadas
+              em leis municipais. Os exemplos abaixo apresentam diferentes temas
+              abordados na atividade legislativa.
+            </p>
+          </header>
+
+          <!-- ---------------------------------------------------
+             GRID DE LEIS
+             --------------------------------------------------- -->
+
+          <div class="leis-grade">
+            <!-- =================================================
+               LEI 3.538/2025
+               ================================================= -->
+
+            <article class="lei-cartao">
+              <div class="lei-cartao-cabecalho">
+                <span class="lei-ano"> 2025 </span>
+
+                <span class="lei-numero"> Lei nº 3.538 </span>
+              </div>
+
+              <h3>Informação sobre medicamentos da rede municipal</h3>
+
+              <p>
+                A lei alterou a legislação municipal para ampliar a divulgação
+                das listas de medicamentos oferecidos pela Rede Municipal de
+                Saúde, incluindo a fixação das listagens em espaços de fácil
+                acesso nas farmácias municipais e outros pontos de distribuição.
+              </p>
+            </article>
+
+            <!-- =================================================
+               LEI 3.550/2025
+               ================================================= -->
+
+            <article class="lei-cartao">
+              <div class="lei-cartao-cabecalho">
+                <span class="lei-ano"> 2025 </span>
+
+                <span class="lei-numero"> Lei nº 3.550 </span>
+              </div>
+
+              <h3>Acompanhamento de estudantes com dislexia e TDAH</h3>
+
+              <p>
+                A legislação incluiu no Programa de Assistência ao Aprendizado
+                formas de acompanhamento de estudantes com dislexia, TDAH e
+                outros transtornos de aprendizagem na Rede Municipal de
+                Educação.
+              </p>
+            </article>
+
+            <!-- =================================================
+               LEI 3.549/2025
+               ================================================= -->
+
+            <article class="lei-cartao">
+              <div class="lei-cartao-cabecalho">
+                <span class="lei-ano"> 2025 </span>
+
+                <span class="lei-numero"> Lei nº 3.549 </span>
+              </div>
+
+              <h3>Vacinação domiciliar para idosos</h3>
+
+              <p>
+                A lei alterou o Programa de Vacinação Domiciliar de Idosos,
+                permitindo sua manutenção por meio de recursos financeiros
+                provenientes do Ministério da Saúde, observadas as diretrizes do
+                Programa Nacional de Imunizações.
+              </p>
+            </article>
+
+            <!-- =================================================
+               LEI 3.551/2025
+               ================================================= -->
+
+            <article class="lei-cartao">
+              <div class="lei-cartao-cabecalho">
+                <span class="lei-ano"> 2025 </span>
+
+                <span class="lei-numero"> Lei nº 3.551 </span>
+              </div>
+
+              <h3>Programa Pomar Caxiense</h3>
+
+              <p>
+                A lei instituiu o Programa Pomar Caxiense, voltado ao
+                planejamento, plantio, manejo, preservação e expansão da
+                arborização frutífera em espaços públicos do município.
+              </p>
+            </article>
+
+            <!-- =================================================
+               LEI 3.569/2026
+               ================================================= -->
+
+            <article class="lei-cartao">
+              <div class="lei-cartao-cabecalho">
+                <span class="lei-ano"> 2026 </span>
+
+                <span class="lei-numero"> Lei nº 3.569 </span>
+              </div>
+
+              <h3>Informação para a população idosa</h3>
+
+              <p>
+                A legislação estabeleceu a divulgação de informações sobre
+                políticas públicas, programas sociais e equipamentos destinados
+                aos idosos, incluindo endereço, telefone, horário de
+                funcionamento e legislação relacionada aos serviços.
+              </p>
+            </article>
+
+            <!-- =================================================
+               LEI 3.593/2026
+               ================================================= -->
+
+            <article class="lei-cartao">
+              <div class="lei-cartao-cabecalho">
+                <span class="lei-ano"> 2026 </span>
+
+                <span class="lei-numero"> Lei nº 3.593 </span>
+              </div>
+
+              <h3>Programa Municipal Casas Ancestrais</h3>
+
+              <p>
+                A lei criou o Programa Municipal Casas Ancestrais, voltado ao
+                reconhecimento de locais de memória, grupos culturais, casas
+                religiosas de matriz africana e espaços comunitários que tenham
+                relevância histórica e cultural.
+              </p>
+            </article>
+
+            <!-- =================================================
+               LEI 3.598/2026
+               ================================================= -->
+
+            <article class="lei-cartao">
+              <div class="lei-cartao-cabecalho">
+                <span class="lei-ano"> 2026 </span>
+
+                <span class="lei-numero"> Lei nº 3.598 </span>
+              </div>
+
+              <h3>Segurança em áreas residenciais</h3>
+
+              <p>
+                A legislação veda, no município, o estacionamento ou a parada de
+                veículos de transporte de produtos inflamáveis em áreas
+                residenciais, incluindo terrenos, quintais, galpões e outros
+                imóveis localizados nessas áreas.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================================================
+         SEÇÃO 07 — INSTAGRAM
+         ======================================================= -->
+
+      <section class="secao-instagram" aria-labelledby="titulo-instagram">
+        <div class="container-instagram" id="Acompanhe">
+          <!-- ---------------------------------------------------
+             CABEÇALHO DO INSTAGRAM
+             --------------------------------------------------- -->
+
+          <header class="instagram-cabecalho">
+            <span class="rotulo-secao"> Acompanhe de perto </span>
+
+            <h2 id="titulo-instagram">Atividades e momentos do mandato</h2>
+
+            <p>
+              Confira conteúdos publicados nas redes sociais e acompanhe
+              atividades divulgadas pelo mandato.
+            </p>
+          </header>
+
+          <!-- ---------------------------------------------------
+             POSTS DO INSTAGRAM
+             --------------------------------------------------- -->
+
+          <div class="instagram-grade">
+            <!-- POST 01 -->
+
+            <iframe
+              class="instagram-video"
+              src="https://www.instagram.com/reel/DcrYQ5JJQRU/embed"
+              title="Vídeo de Alex Freitas no Instagram"
+              loading="lazy"
+              scrolling="no"
+              allowfullscreen
+            ></iframe>
+
+            <!-- POST 02 -->
+
+            <iframe
+              class="instagram-video"
+              src="https://www.instagram.com/reel/DdWflpFtkJA/embed"
+              title="Vídeo de Alex Freitas no Instagram"
+              loading="lazy"
+              scrolling="no"
+              allowfullscreen
+            ></iframe>
+
+            <!-- POST 03 -->
+
+            <iframe
+              class="instagram-video"
+              src="https://www.instagram.com/reel/DbyLN_GxxgI/embed"
+              title="Vídeo de Alex Freitas no Instagram"
+              loading="lazy"
+              scrolling="no"
+              allowfullscreen
+            ></iframe>
+
+            <!-- POST 04 -->
+
+            <iframe
+              class="instagram-video"
+              src="https://www.instagram.com/reel/DbzNfM7t2wE/embed"
+              title="Vídeo de Alex Freitas no Instagram"
+              loading="lazy"
+              scrolling="no"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== SECTION FORMULÁRIO DE CONTATO ===== -->
+    <section class="contact" id="contato" aria-label="Fale com o Vereador">
+      <div class="contact__container">
+        <div class="contact__header">
+          <span class="contact__eyebrow">Fale Conosco</span>
+          <h2 class="contact__title">Envie seu problema ao Vereador</h2>
+          <p class="contact__desc">
+            Preencha o formulário abaixo e nossa equipe entrará em contato o
+            mais breve possível.
+          </p>
+        </div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+          <!-- Linha 1 — Nome + Telefone -->
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="nome"
+                >Nome completo <span class="form__required">*</span></label
+              >
+              <input
+                class="form__input"
+                type="text"
+                id="nome"
+                name="nome"
+                placeholder="Seu nome completo"
+                required
+              />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="telefone"
+                >Telefone / WhatsApp</label
+              >
+              <input
+                class="form__input"
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(00) 00000-0000"
+              />
+            </div>
+          </div>
+
+          <!-- Linha 2 — E-mail -->
+          <div class="form__row">
+            <div class="form__group form__group--full">
+              <label class="form__label" for="email"
+                >E-mail para resposta
+                <span class="form__required">*</span></label
+              >
+              <input
+                class="form__input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="seuemail@exemplo.com"
+                required
+              />
+            </div>
+          </div>
+
+          <!-- Linha 3 — Bairro + Rua -->
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="bairro">Bairro</label>
+              <input
+                class="form__input"
+                type="text"
+                id="bairro"
+                name="bairro"
+                placeholder="Seu bairro"
+              />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="rua">Rua / Logradouro</label>
+              <input
+                class="form__input"
+                type="text"
+                id="rua"
+                name="rua"
+                placeholder="Nome da rua"
+              />
+            </div>
+          </div>
+
+          <!-- Linha 4 — Número + Complemento -->
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="numero">Número</label>
+              <input
+                class="form__input"
+                type="text"
+                id="numero"
+                name="numero"
+                placeholder="Nº"
+              />
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="complemento">Complemento</label>
+              <input
+                class="form__input"
+                type="text"
+                id="complemento"
+                name="complemento"
+                placeholder="Apto, bloco, referência..."
+              />
+            </div>
+          </div>
+
+          <!-- Linha 5 — Assunto (select) -->
+          <div class="form__row">
+            <div class="form__group form__group--full">
+              <label class="form__label" for="assunto"
+                >Assunto <span class="form__required">*</span></label
+              >
+              <select
+                class="form__input form__select"
+                id="assunto"
+                name="assunto"
+                required
+              >
+                <option value="" disabled selected>
+                  Selecione o tipo de problema
+                </option>
+                <option value="infraestrutura">
+                  Infraestrutura (ruas, calçadas, iluminação)
+                </option>
+                <option value="saude">Saúde</option>
+                <option value="educacao">Educação</option>
+                <option value="seguranca">Segurança pública</option>
+                <option value="meio_ambiente">Meio ambiente e limpeza</option>
+                <option value="transporte">Transporte público</option>
+                <option value="social">Assistência social</option>
+                <option value="outro">Outro</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Linha 6 — Descrição do problema -->
+          <div class="form__row">
+            <div class="form__group form__group--full">
+              <label class="form__label" for="problema"
+                >Descreva o problema
+                <span class="form__required">*</span></label
+              >
+              <textarea
+                class="form__input form__textarea"
+                id="problema"
+                name="problema"
+                placeholder="Descreva detalhadamente o problema ou situação que deseja reportar ao vereador..."
+                rows="6"
+                required
+              ></textarea>
+            </div>
+          </div>
+
+          <!-- Botão -->
+          <div class="form__footer">
+            <p class="form__note">
+              <span class="form__required">*</span> Campos obrigatórios
+            </p>
+            <button class="form__btn" type="submit">
+              <span>Enviar mensagem</span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="18"
+                height="18"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <line x1="22" y1="2" x2="11" y2="13" />
+                <polygon points="22 2 15 22 11 13 2 9 22 2" />
+              </svg>
+            </button>
+          </div>
+        </form>
+
+        <!-- Mensagem de sucesso (oculta até o envio) -->
+        <div class="form__success" id="formSuccess" role="alert" tabindex="-1">
+          <div class="form__success-icon" aria-hidden="true">✓</div>
+          <h3 class="form__success-title">Mensagem enviada!</h3>
+          <p class="form__success-text">
+            Obrigado pelo contato. A resposta será enviada para o seu e-mail em
+            alguns dias úteis. Agradecemos a confiança!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
